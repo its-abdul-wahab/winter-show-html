@@ -8,6 +8,9 @@
     font-family: Cormorant Infant;
   }
 
+  header{
+    position: relative;
+  }
   header.bg-image-attached{
     background-image: url('../images/model-img-1.png');
   }
@@ -27,7 +30,6 @@
   }
 
   section .section-text{
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -97,3 +99,38 @@
     background: black;
     color: white;
   }
+
+  .arrow-container{
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+  }
+
+  .arrow {
+    background: #fff;
+    height: 40px;
+    width: 3px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+  }
+  .arrow:before,
+  .arrow:after {
+      content: "";
+      background: #fff;
+      position: absolute;
+      height: 3px;
+      width: 25px;
+    }
+  
+.arrow:before {
+    right: -19px;
+    bottom: 7px;
+    transform: rotate(-45deg);
+}
+
+.arrow:after {
+    right: -3px;
+    top: 30px;
+    transform: rotate(45deg);
+}

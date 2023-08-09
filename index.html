@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <title>Winter show 2023</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- CSS File -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
   <!-- Font Family CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,33 +19,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
   <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Header section -->
   <header class="bg-image-attached">
     <h1 class="header-text">WINTER SHOW<br>2023</h1>
+    <div class="arrow-container"><div class="arrow"></div></div>
   </header>
 
   <!-- Second section -->
-  <section>
-    <div class="grid grid-cols-2 grid-row-1">
+  <section class="monochrome-section">
+    <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="section-image">
-        <img src="images/model-img-2.png" alt="Model 02">
+        <img class="hidden md:block" src="images/model-img-2.png" alt="Model 02">
+        
+        <div class="block md:hidden relative">
+          <img src="images/responsive/model-image-2.png" alt="Model 02">
+          <h3 class="section-heading absolute top-8 right-5">MONOCHROME<br> AFFAIR</h3>
+          <div class="grid grid-cols-2 absolute bottom-0">
+            <div class="flex items-center">
+              <div class="text-center text-white">
+                <h2 class="text-3xl uppercase font-normal">Style</h2>
+                <p class="px-5 text-xs text-justify font-light leading-4">Step into the world of Luceria & Co. and immerse yourself in the allure of masterful craftsmanship and timeless beauty.</p>
+              </div>
+            </div>
+            <img src="images/model-img-3.png" alt="Model 03">
+          </div>
+        </div>
+        
       </div>
-      <div class="section-text">
+      <div class="section-text hidden md:flex">
         <h3 class="w-8/12">MONOCHROME AFFAIR</h3>
       </div>
     </div>
   </section>
 
   <!-- Third section -->
-  <section>
+  <section class="hidden md:block">
     <div class="grid grid-cols-2 grid-row-1">
       <div class="section-text">
         <div class="style-defined">
-          <h2>Style</h3>
+          <h2>Style</h2>
           <p class="px-5 w-3/12 mx-auto">Step into the world of Luceria & Co. and immerse yourself in the allure of masterful craftsmanship and timeless beauty.</p>
       </div>
       </div>
@@ -54,12 +73,13 @@
   </section>
 
   <!-- Fourth section -->
-  <section>
-    <div class="grid grid-cols-2 grid-row-1">
+  <section class="elegance-section">
+    <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="section-image">
-        <img src="images/model-img-4.png" alt="Model 04">
+        <img class="hidden md:block" src="images/model-img-4.png" alt="Model 04">
+        <img class="block md:hidden" src="images/responsive/model-image-4.png" alt="Model 04">
       </div>
-      <div class="section-text">
+      <div class="section-text py-10 md:py-0">
         <blockquote class="px-10">“Elegance is not standing out, but being remembered.” -  
           <cite>Giorgio Armani</cite>
           </blockquote>
@@ -69,7 +89,8 @@
 
   <!-- Fifth section -->
   <section>
-    <img src="images/model-img-5.png" alt="Model 05">
+    <img class="hidden md:block" src="images/model-img-5.png" alt="Model 05">
+    <img class="block md:hidden" src="images/responsive/model-image-5.png" alt="Model 05">
   </section>
 
 
