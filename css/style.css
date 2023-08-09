@@ -78,3 +78,22 @@
     font-weight: 400;
     color: white;
   }
+
+
+  button {
+    background: white;
+    border: 1px solid black;
+    padding: 1rem 1.5rem !important;
+    text-transform: uppercase !important;
+    font-family: Montserrat !important;
+    font-weight: 600 !important;
+    width: 18rem;
+    margin-bottom: 1rem !important;
+    font-size: 1.25rem !important;
+    display: block;
+    transition: .2s ease-in-out;
+  }
+  button:hover{
+    background: black;
+    color: white;
+  }
