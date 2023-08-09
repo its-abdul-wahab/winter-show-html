@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: Cormorant Infant;
+  }
+
+  header.bg-image-attached{
+    background-image: url('../images/model-img-1.png');
+  }
+  .bg-image-attached {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .header-text{
+    text-align: center;
+    color: white;
+    font-size: 3.75rem;
+  }
+
+  section .section-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3.75rem;
+    font-family: Crimson Text;
+  }
+
+  section .style-defined h2, section .emotion-defined h2{
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: Crimson Text;
+  }
+  section .style-defined p, section .emotion-defined p{
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+  section blockquote{
+    font-size: 3rem;
+    font-weight: 500;
+    font-style: italic;
+    font-family: Crimson Text;
+  }
+
+  section .compelling-text h4{
+    font-size: 5rem;
+    font-style: italic;
+    line-height: 3.75rem;
+    font-family: Crimson Text;
+  }
+
+  section .show-date{
+    font-size: 3.75rem;
+    font-family: Cormorant Infant;
+    font-style: normal;
+  }
+
+  section.bg-image-attached.last-section{
+    background-image: url('../images/model-img-13.png');
+  }
+  section.last-section h1{
+    font-size: 4rem;
+    font-weight: 400;
+    color: white;
+  }
