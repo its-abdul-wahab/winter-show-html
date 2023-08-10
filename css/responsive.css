@@ -16,15 +16,30 @@
     }
 
     section.thread-story-section p{
+        padding-top: 80%;  
+        line-height: 1.5rem;
+    }
+
+    section.thread-story-section p{
         font-size: 1.56rem;
         font-family:   Crimson Text;
     }
-
-    section.grace-section{}
     section.bg-image-attached.last-section{
         background-image: url('../images/responsive/model-image-13.png');
       }
       button{
         font-size: 1rem !important;
       }
+}
+
+@media only screen and (max-width: 640px) {
+    section.thread-story-section p{
+        padding-top: 65%;  
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    section.thread-story-section p{
+        padding-top: 55%;  
+    }
 }
