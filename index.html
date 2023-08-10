@@ -24,9 +24,13 @@
 <body>
 
   <!-- Header section -->
-  <header class="bg-image-attached">
-    <h1 class="text-white text-center text-3xl md:text-6xl">WINTER SHOW<br>2023</h1>
-    <div class="arrow-container"><div class="arrow"></div></div>
+  <header class="h-screen overflow-hidden relative">
+    <div class="absolute h-full w-full z-1">
+      <img class="hidden md:block object-cover" data-scroll-zoom src="images/model-img-1.png" alt="Model 01">
+      <img class="block md:hidden" src="images/responsive/model-image-1.png" alt="Model 01">
+    </div>
+    <h1 class="text-white text-center z-11 relative text-3xl md:text-6xl">WINTER SHOW<br>2023</h1>
+    <div class="arrow-container z-11 absolute"><div class="arrow"></div></div>
   </header>
 
   <!-- Second section -->
@@ -92,8 +96,8 @@
   </section>
 
   <!-- Fifth section -->
-  <section>
-    <img class="hidden md:block" src="images/model-img-5.png" alt="Model 05">
+  <section class="h-screen overflow-hidden">
+    <img class="hidden md:block w-full h-full object-cover" data-scroll-zoom src="images/model-img-5.png" alt="Model 05">
     <img class="block md:hidden w-full" src="images/responsive/model-image-5.png" alt="Model 05">
   </section>
 
@@ -171,8 +175,8 @@
   </section>
 
   <!-- Ninth section -->
-  <section>
-    <img class="hidden md:block" src="images/model-img-9.png" alt="Model 09">
+  <section class="h-screen overflow-hidden">
+    <img class="hidden md:block w-full h-full object-cover" data-scroll-zoom src="images/model-img-9.png" alt="Model 09">
     <img class="block md:hidden w-full" src="images/responsive/model-image-9.png" alt="Model 09">
   </section>
 
@@ -230,8 +234,12 @@
   </section>
 
   <!-- Last section -->
-  <section class="bg-image-attached last-section">
-    <div>
+  <section class="h-screen overflow-hidden relative last-section">
+    <div class="absolute h-full w-full z-1">
+      <img class="hidden md:block object-cover" data-scroll-zoom src="images/model-img-13.png" alt="Model 13">
+      <img class="block md:hidden" src="images/responsive/model-image-13.png" alt="Model 13">
+    </div>
+    <div class="coming-soon">
       <h1 class="header-text text-4xl md:text-6xl text-white pt-20 md:pt-0"><i>Chapter 3</i> is <span class="uppercase">COMING.</span></h1>
       <div class="block md:hidden pt-32 md:pt-0 px-5 mx-auto">
         <button>Share Page</button>
@@ -243,5 +251,6 @@
     </div>
   </section>
 
+  <script src="js/index.js"></script>
 </body>
 </html>
