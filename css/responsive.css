@@ -72,3 +72,6 @@ section{
     top: 0;
     display: inline-block;
   }
+  .site-section{
+    height: 100vh !important;
+  }

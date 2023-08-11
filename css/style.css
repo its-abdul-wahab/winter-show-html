@@ -153,3 +153,18 @@
     top: 30px;
     transform: rotate(45deg);
 }
+
+.indicator{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* display: none; */
+    transition: display 0.3s ease;
+}
+.indicator.active{
+    /* display: block; */
+    background: black;
+}

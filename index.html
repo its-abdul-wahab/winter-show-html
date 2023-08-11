@@ -24,7 +24,7 @@
 <body>
 
   <!-- Header section -->
-  <header class="h-screen w-full overflow-hidden relative">
+  <header id="section-1" style="height: 110vh;" class="site-section w-full overflow-hidden relative">
     <div class="absolute h-full w-full z-1">
       <img class="hidden md:block object-cover" data-scroll-zoom src="images/model-img-1.png" alt="Model 01">
       <img class="block md:hidden object-cover" src="images/responsive/model-image-1.png" alt="Model 01">
@@ -34,7 +34,7 @@
   </header>
 
   <!-- Second section -->
-  <section class="monochrome-section">
+  <section id="section-2" class="site-section monochrome-section full-width-model h-screen w-full overflow-hidden z-1">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="section-image">
         <img class="hidden md:block" src="images/model-img-2.png" alt="Model 02">
@@ -63,7 +63,7 @@
   </section>
 
   <!-- Third section -->
-  <section class="hidden md:block">
+  <section  class="hidden md:block">
     <div class="grid grid-cols-2 grid-row-1">
       <div class="section-text bg-white flex">
         <div class="style-defined">
@@ -81,7 +81,7 @@
   </section>
 
   <!-- Fourth section -->
-  <section class="elegance-section">
+  <section id="section-3" class="site-section elegance-section full-width-model h-screen w-full overflow-hidden z-1">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="section-image">
         <img class="hidden md:block" src="images/model-img-4.png" alt="Model 04">
@@ -96,12 +96,12 @@
   </section>
 
   <!-- Fifth section -->
-  <div class="full-width-model h-screen w-full overflow-hidden z-1">
+  <div id="section-4" class="site-section full-width-model h-screen w-full overflow-hidden z-1">
     <img class="hidden md:block w-full h-full object-cover" data-scroll-zoom src="images/model-img-5.png" alt="Model 05">
     <img class="block md:hidden w-full h-full object-cover" src="images/responsive/model-image-5.png" alt="Model 05">
   </div>
 
-  <section class="thread-story-section bg-white block md:hidden">
+  <section id="section-5" class="site-section thread-story-section bg-white block md:hidden">
     <div class="grid grid-cols-2">
       <div class="text-center">
           <p class="px-5 sm:pt-72">Every <strong>thread</strong> tells a story</p>
@@ -154,7 +154,7 @@
   </section>
 
   <!-- Eigth section -->
-  <section class="grace-section">
+  <section id="section-6" class="site-section grace-section">
     <div class="grid grid-cols-1 md:grid-cols-2 relative h-full md:h-auto">
       <div class="section-text flex bg-white order-2 md:order-1">
         <div class="style-defined hidden md:block">
@@ -175,13 +175,13 @@
   </section>
 
   <!-- Ninth section -->
-  <div class="full-width-model h-screen w-full overflow-hidden">
+  <div id="section-7" class="site-section full-width-model h-screen w-full overflow-hidden">
     <img class="hidden md:block w-full h-full object-cover" data-scroll-zoom src="images/model-img-9.png" alt="Model 09">
     <img class="block md:hidden w-full h-full object-cover" src="images/responsive/model-image-9.png" alt="Model 09">
   </div>
 
   <!-- Tenth section -->
-  <section>
+  <section id="section-8" class="site-section">
     <div class="grid grid-cols-1 md:grid-cols-2 grid-row-1 h-full md:h-auto">
       <div class="section-image bg-white order-2 md:order-1">
         <img class="hidden md:block" src="images/model-img-10.png" alt="Model 10">
@@ -196,7 +196,7 @@
   </section>
 
   <!-- Eleventh section -->
-  <section>
+  <section id="section-9" class="site-section">
     <div class="grid grid-cols-1 md:grid-cols-2 relative h-full md:h-auto">
       <div class="section-text hidden md:flex bg-white order-2 md:order-1">
         <div class="show-date hidden md:block">
@@ -216,7 +216,7 @@
   </section>
 
   <!-- Twevth section -->
-  <section>
+  <section id="section-10" class="site-section">
     <div class="grid grid-cols-1 md:grid-cols-2 grid-row-1 h-full md:h-auto">
       <div class="section-image">
         <img class="hidden md:block" src="images/model-img-12.png" alt="Model 12">
@@ -235,7 +235,7 @@
   </section>
 
   <!-- Last section -->
-  <section class="h-screen w-full overflow-hidden relative last-section">
+  <section id="section-11" class="site-section h-screen w-full overflow-hidden relative last-section">
     <div class="absolute h-full w-full z-1">
       <img class="hidden md:block object-cover" data-scroll-zoom src="images/model-img-13.png" alt="Model 13">
       <img class="block md:hidden object-cover" src="images/responsive/model-image-13.png" alt="Model 13">
@@ -252,6 +252,21 @@
     </div>
   </section>
 
+  <div class="fixed md:hidden top-1/2 right-5 z-11">
+    <div onclick="scrollToSection(1)" class="indicator"></div>
+    <div onclick="scrollToSection(2)" class="indicator"></div>
+    <div onclick="scrollToSection(3)" class="indicator"></div>
+    <div onclick="scrollToSection(4)" class="indicator"></div>
+    <div onclick="scrollToSection(5)" class="indicator"></div>
+    <div onclick="scrollToSection(6)" class="indicator"></div>
+    <div onclick="scrollToSection(7)" class="indicator"></div>
+    <div onclick="scrollToSection(8)" class="indicator"></div>
+    <div onclick="scrollToSection(9)" class="indicator"></div>
+    <div onclick="scrollToSection(10)" class="indicator"></div>
+    <div onclick="scrollToSection(11)" class="indicator"></div>
+  </div>
+
   <script src="js/index.js"></script>
+  <script src="js/indicators.js"></script>
 </body>
 </html>

@@ -23,11 +23,13 @@ function scrollZoom() {
     observer.observe(image);
 
     // Set initial image scale on page load
+    // console.log('test  scle ', scaleAmount, percentageSeen(image), 1+scaleAmount * percentageSeen(image))
     image.style.transform = `scale(${1 + scaleAmount * percentageSeen(image)})`;
 
     // Only fires if IntersectionObserver is intersecting
     window.addEventListener("scroll", () => {
       if (isVisible) {
+        // console.log('isVisisble , ', scaleAmount, percentageSeen(image), 1+scaleAmount * percentageSeen(image))
         scrollPosY = window.pageYOffset;
         image.style.transform = `scale(${1 +
           scaleAmount * percentageSeen(image)})`;
@@ -64,3 +66,43 @@ function scrollZoom() {
 }
 
 scrollZoom();
+
+
+
+
+function scrollToSection(index) {
+    const section = document.getElementById(`section-${index}`)
+    const indicators = document.querySelectorAll('.indicator');
+
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+    updateIndicatorsVisibility(index);
+}
+
+// updateIndicatorsVisibility(1);
+
+function updateIndicatorsVisibility(activeIndex) {
+    const indicators = document.querySelectorAll('.indicator');
+
+    console.log('indexx ', activeIndex)
+    for (let i = 0; i < indicators.length; i++) {
+        const indicator = indicators[i];
+    
+        // Determine whether to show or hide the indicator based on activeIndicator
+        if (i === activeIndex - 1) {
+            console.log('first con ', i, activeIndex - 1);
+            indicator.classList.add('active');
+            indicator.style.display = 'block';
+          } else if (i === activeIndex - 2 || i === activeIndex || (activeIndex === 1 && i === activeIndex+1) ||  (activeIndex === 11 && i === activeIndex-3)) {
+            console.log('second con i === activeIndex - 2', i, activeIndex - 2);
+            console.log('second con index === activeIndex', i, activeIndex);
+            console.log('second con activeIndex === 1 and i === activeIndex + 1', i, activeIndex, activeIndex+1);
+            console.log('second con activeIndex === 12 and activeIndex - 3', i, activeIndex - 3);
+            indicator.classList.remove('active');
+            indicator.style.display = 'block';
+          } else {
+            console.log('else ', i);
+            indicator.style.display = 'none';
+          }
+      }
+  }
