@@ -47,6 +47,12 @@
     }
 }
 
+
+@media (min-width: 768px) {
+    .section-image{
+        height: 100vh;
+    }
+}
 @media (max-width: 768px) {
     .full-width-model{
         position: sticky !important;
