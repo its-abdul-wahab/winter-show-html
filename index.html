@@ -24,7 +24,7 @@
 <body>
 
   <!-- Header section -->
-  <header id="section-1" style="height: 110vh;" class="site-section w-full overflow-hidden relative">
+  <header id="section-1" class="site-section w-full overflow-hidden relative">
     <div class="absolute h-full w-full z-1">
       <img class="hidden md:block object-cover" data-scroll-zoom src="images/model-img-1.png" alt="Model 01">
       <img class="block md:hidden object-cover" src="images/responsive/model-image-1.png" alt="Model 01">
@@ -35,12 +35,12 @@
 
   <!-- Second section -->
   <section id="section-2" class="site-section monochrome-section full-width-model h-screen w-full overflow-hidden z-1">
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 h-full md:h-auto">
       <div class="section-image">
         <img class="hidden md:block" src="images/model-img-2.png" alt="Model 02">
         
-        <div class="block md:hidden relative">
-          <img class="w-full" src="images/responsive/model-image-2.png" alt="Model 02">
+        <div class="block md:hidden relative h-full">
+          <img class="w-full h-full object-cover" src="images/responsive/model-image-2.png" alt="Model 02">
           <h3 class="section-heading absolute top-8 right-5">MONOCHROME<br> AFFAIR</h3>
           <div class="grid grid-cols-2 absolute bottom-0">
             <div class="flex items-center">
@@ -252,7 +252,7 @@
     </div>
   </section>
 
-  <div class="fixed md:hidden top-1/2 right-5 z-11">
+  <div class="fixed md:hidden top-1/2 right-3 z-11">
     <div onclick="scrollToSection(1)" class="indicator"></div>
     <div onclick="scrollToSection(2)" class="indicator"></div>
     <div onclick="scrollToSection(3)" class="indicator"></div>

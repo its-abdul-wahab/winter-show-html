@@ -54,6 +54,13 @@
     }
 }
 @media (max-width: 768px) {
+    header{
+        position: sticky !important;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        display: inline-block;
+    }
     .full-width-model{
         position: sticky !important;
         width: 100%;
