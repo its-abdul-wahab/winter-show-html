@@ -58,6 +58,7 @@
     font-size: 1.25rem;
     font-weight: 300;
     text-align: justify;
+    font-family: Noto Serif SC;
   }
 
   section blockquote{
@@ -74,10 +75,11 @@
     font-family: Crimson Text;
   }
 
-  section .show-date{
+  section .show-date p{
     font-size: 3.75rem;
     font-family: Cormorant Infant;
     font-style: normal;
+    font-weight: 300;
   }
 
   section.bg-image-attached.last-section{
@@ -126,7 +128,6 @@
     width: 3px;
     margin: 0 auto;
     position: relative;
-    cursor: pointer;
   }
   .arrow:before,
   .arrow:after {

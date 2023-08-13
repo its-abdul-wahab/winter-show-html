@@ -55,7 +55,12 @@
     }
 }
 
+/* Tablet Responsive */
 @media (min-width: 768px) and (max-width: 992px) {
+    header h1{
+        font-size: 3.43rem !important;
+        line-height: 4.1rem !important;
+    }
     section .section-text{
         font-size: 2.8rem;
     }
