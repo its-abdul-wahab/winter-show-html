@@ -8,5 +8,6 @@ window.addEventListener("load", function () {
 
 
 window.addEventListener("beforeunload", function () {
+    // Page is reloaded, show the loader
     document.querySelector(".pre-loader").style.display = "flex";
 });

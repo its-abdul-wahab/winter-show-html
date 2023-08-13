@@ -25,20 +25,24 @@
 <body>
 
   <!-- Header section -->
-  <header id="section-1" class="site-section w-full overflow-hidden relative">
-    <div class="absolute h-full w-full z-1">
-      <img class="hidden md:block object-cover" data-scroll-zoom src="images/model-img-1.png" alt="Model 01">
-      <img class="block md:hidden object-cover" src="images/responsive/model-image-1.png" alt="Model 01">
+  <header id="section-1" class="site-section relative">
+    <div class="absolute full-section-cover h-full w-full z-1">
+      <img class="hidden lg:block" data-scroll-zoom src="images/model-img-1.png" alt="Model 01">
+      <img class="hidden md:block lg:hidden" data-scroll-zoom src="images/responsive/model-image-1.png" alt="Model 01">
+      <img class="block md:hidden" src="images/responsive/model-image-1.png" alt="Model 01">
     </div>
     <h1 class="text-white text-center z-11 relative text-3xl md:text-6xl">WINTER SHOW<br>2023</h1>
-    <div onclick="scrollOnArrow()" class="arrow-container z-11 absolute bottom-20 left-1/2 md:bottom-12"><div class="arrow"></div></div>
+    <div onclick="scrollOnArrow()" class="arrow-container absolute left-1/2 bottom-20 lg:bottom-12 z-11">
+      <div class="arrow"></div>
+    </div>
   </header>
 
   <!-- Second section -->
-  <section id="section-2" class="site-section monochrome-section full-width-model h-screen w-full overflow-hidden z-1">
+  <section id="section-2" class="site-section monochrome-section full-width-model z-1">
     <div class="grid grid-cols-1 md:grid-cols-2 h-full md:h-auto">
       <div class="section-image">
-        <img class="hidden md:block" src="images/model-img-2.png" alt="Model 02">
+        <img class="hidden lg:block" src="images/model-img-2.png" alt="Model 02">
+        <img class="hidden md:block lg:hidden h-full w-full object-cover" src="images/responsive/model-image-2.png" alt="Model 02">
         
         <div class="block md:hidden relative h-full">
           <img class="w-full h-full object-cover" src="images/responsive/model-image-2.png" alt="Model 02">
@@ -69,24 +73,24 @@
       <div class="section-text bg-white flex">
         <div class="style-defined">
           <h2>Style</h2>
-          <p class="px-5 md:w-5/12 lg:w-3/12 mx-auto">
+          <p class="px-5 md:w-6/12 lg:w-3/12 mx-auto">
             Step into the world of Luceria & Co. and immerse yourself in the allure of masterful craftsmanship and timeless beauty.
           </p>
       </div>
       </div>
       <div class="section-image">
-        <img src="images/model-img-3.png" alt="Model 03">
+        <img class="h-full w-full object-cover" src="images/model-img-3.png" alt="Model 03">
       </div>
     
     </div>
   </section>
 
   <!-- Fourth section -->
-  <section id="section-3" class="site-section elegance-section full-width-model h-screen w-full overflow-hidden z-1">
+  <section id="section-3" class="site-section elegance-section full-width-model z-1">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="section-image">
-        <img class="hidden md:block" src="images/model-img-4.png" alt="Model 04">
-        <img class="block md:hidden w-full" src="images/responsive/model-image-4.png" alt="Model 04">
+        <img class="hidden lg:block" src="images/model-img-4.png" alt="Model 04">
+        <img class="block lg:hidden w-full h-full object-cover md:object-left" src="images/responsive/model-image-4.png" alt="Model 04">
       </div>
       <div class="section-text bg-white flex py-10 md:py-0">
         <blockquote class="px-10">“Elegance is not standing out, but being remembered.” -  
@@ -97,9 +101,10 @@
   </section>
 
   <!-- Fifth section -->
-  <div id="section-4" class="site-section full-width-model h-screen w-full overflow-hidden z-1">
-    <img class="hidden md:block w-full h-full object-cover" data-scroll-zoom src="images/model-img-5.png" alt="Model 05">
-    <img class="block md:hidden w-full h-full object-cover" src="images/responsive/model-image-5.png" alt="Model 05">
+  <div id="section-4" class="site-section full-section-cover full-width-model z-1">
+    <img class="hidden lg:block" data-scroll-zoom src="images/model-img-5.png" alt="Model 05">
+    <img class="hidden md:block lg:hidden" data-scroll-zoom src="images//responsive/model-image-5.png" alt="Model 05">
+    <img class="block md:hidden relative z-11" src="images/responsive/model-image-5.png" alt="Model 05">
   </div>
 
   <section id="section-5" class="site-section thread-story-section bg-white block md:hidden">
@@ -129,13 +134,14 @@
       <div class="section-text bg-white flex">
         <div class="emotion-defined py-7">
           <h2>Emotion</h3>
-          <p class="px-5 md:w-7/12 lg:w-6/12 mx-auto">
+          <p class="px-5 md:w-8/12 lg:w-6/12 mx-auto">
             Every thread tells a story, every stitch is a note in the melody of the designer's narrative. From the grandeur of haute couture to the avant-garde allure of experimental creations, fashion becomes a living embodiment of the artist's soul, a mirror reflecting the ever-evolving society it adorns.
           </p>
       </div>
       </div>
       <div class="section-image">
-        <img src="images/model-img-6.png" alt="Model 06">
+        <img class="hidden lg:block" src="images/model-img-6.png" alt="Model 06">
+        <img class="block lg:hidden h-full w-full object-cover" src="images/responsive//model-image-6.png" alt="Model 06">
       </div>
     </div>
   </section>
@@ -144,7 +150,8 @@
    <section class="hidden md:block">
     <div class="grid grid-cols-2 grid-row-1">
       <div class="section-image">
-        <img src="images/model-img-7.png" alt="Model 07">
+        <img class="hidden lg:block" src="images/model-img-7.png" alt="Model 07">
+        <img class="block lg:hidden h-full w-full object-cover" src="images/responsive//model-image-7.png" alt="Model 07">
       </div>
       <div class="section-text bg-white flex">
         <blockquote class="px-10">“Fashion is a form of escapism not an imprisonment.  -  
@@ -159,37 +166,38 @@
     <div class="grid grid-cols-1 md:grid-cols-2 relative h-full md:h-auto">
       <div class="section-text flex bg-white order-2 md:order-1">
         <div class="style-defined hidden md:block">
-          <p class="px-5 text-xl w-5/12 mx-auto">
+          <p class="px-5 text-xl w-7/12 lg:w-5/12 mx-auto">
             Embrace every moment with the self-assured grace that defines you, and watch as your style radiates a brilliance matched only by your confidence.
           </p>
         </div>
       </div>
       <div class="block md:hidden w-9/12 bg-white absolute bottom-20 right-0">
-        <p class="p-5 text-right text-lg leading-4  md:w-5/12 mx-auto">
+        <p class="p-5 text-right text-lg leading-4 md:w-5/12 mx-auto">
           Embrace every moment with the self-assured grace that defines you, and watch as your style radiates a brilliance matched only by your confidence.
         </p>
       </div>
       <div class="section-image order-1 md:order-2">
-        <img class="h-full md:h-auto w-full object-cover" src="images/model-img-8.png" alt="Model 08">
+        <img class="h-full lg:h-auto w-full object-cover" src="images/model-img-8.png" alt="Model 08">
       </div>
     </div>
   </section>
 
   <!-- Ninth section -->
-  <div id="section-7" class="site-section full-width-model h-screen w-full overflow-hidden">
-    <img class="hidden md:block w-full h-full object-cover" data-scroll-zoom src="images/model-img-9.png" alt="Model 09">
-    <img class="block md:hidden w-full h-full object-cover" src="images/responsive/model-image-9.png" alt="Model 09">
+  <div id="section-7" class="site-section full-section-cover full-width-model">
+    <img class="hidden lg:block" data-scroll-zoom src="images/model-img-9.png" alt="Model 09">
+    <img class="hidden md:block lg:hidden" data-scroll-zoom src="images//responsive/model-image-9.png" alt="Model 09">
+    <img class="block md:hidden relative z-11" src="images/responsive/model-image-9.png" alt="Model 09">
   </div>
 
   <!-- Tenth section -->
   <section id="section-8" class="site-section">
     <div class="grid grid-cols-1 md:grid-cols-2 grid-row-1 h-full md:h-auto">
       <div class="section-image bg-white order-2 md:order-1">
-        <img class="hidden md:block" src="images/model-img-10.png" alt="Model 10">
-        <img class="block md:hidden w-full h-full object-cover pl-20" src="images/responsive/model-image-10.png" alt="Model 10">
+        <img class="hidden lg:block" src="images/model-img-10.png" alt="Model 10">
+        <img class="block lg:hidden h-full w-full object-cover pl-20 md:pl-0" src="images/responsive/model-image-10.png" alt="Model 10">
       </div>
       <div class="section-text bg-white flex order-1 md:order-2">
-        <h4 class="py-10 md:py-0 md:px-5 md:w-5/12 mx-auto text-3xl md:text-7xl">
+        <h4 class="py-10 md:py-0 md:px-5 md:w-5/12 mx-auto text-3xl md:text-6xl lg:text-7xl">
           let the world be your runway
         </h4>
       </div>
@@ -209,8 +217,8 @@
         <p class="text-2xl">GRANDBAL SHOWROOM 2PM 11/02/2023</p>
       </div>
       <div class="section-image bg-white order-1 md:order-2">
-        <img class="hidden md:block" src="images/model-img-11.png" alt="Model 11">
-        <img class="block md:hidden w-full h-full object-cover pr-20" src="images/responsive/model-image-11.png" alt="Model 11">
+        <img class="hidden lg:block" src="images/model-img-11.png" alt="Model 11">
+        <img class="block lg:hidden h-full w-full object-cover pr-20 md:pr-0" src="images/responsive/model-image-11.png" alt="Model 11">
       </div>
     
     </div>
@@ -220,8 +228,8 @@
   <section id="section-10" class="site-section">
     <div class="grid grid-cols-1 md:grid-cols-2 grid-row-1 h-full md:h-auto">
       <div class="section-image">
-        <img class="hidden md:block" src="images/model-img-12.png" alt="Model 12">
-        <img class="block md:hidden w-full h-full object-cover" src="images/responsive/model-image-12.png" alt="Model 12">
+        <img class="hidden lg:block" src="images/model-img-12.png" alt="Model 12">
+        <img class="block lg:hidden w-full h-full object-cover" src="images/responsive/model-image-12.png" alt="Model 12">
       </div>
       <div class="section-text bg-white hidden md:flex">
         <div class="px-5 mx-auto">
@@ -236,12 +244,13 @@
   </section>
 
   <!-- Last section -->
-  <section id="section-11" class="site-section h-screen w-full overflow-hidden relative last-section">
-    <div class="absolute h-full w-full z-1">
-      <img class="hidden md:block object-cover" data-scroll-zoom src="images/model-img-13.png" alt="Model 13">
-      <img class="block md:hidden object-cover" src="images/responsive/model-image-13.png" alt="Model 13">
+  <section id="section-11" class="site-section relative last-section">
+    <div class="full-section-cover absolute h-full w-full z-1">
+      <img class="hidden lg:block" data-scroll-zoom src="images/model-img-13.png" alt="Model 13">
+      <img class="hidden md:block lg:hidden" data-scroll-zoom src="images/responsive/model-image-13.png" alt="Model 13">
+      <img class="block md:hidden" src="images/responsive/model-image-13.png" alt="Model 13">
     </div>
-    <div class="coming-soon">
+    <div class="coming-soon md:w-full">
       <h1 class="header-text text-4xl md:text-6xl text-white pt-20 md:pt-0"><i>Chapter 3</i> is <span class="uppercase">COMING.</span></h1>
       <div class="block md:hidden pt-28 pb-5 md:pt-0 px-5 mx-auto">
         <button>Share Page</button>
@@ -281,6 +290,6 @@
 </div>
 
   <script src="js/index.js"></script>
-  <script src="js/indicators.js"></script>
+  <script src="js/preLoader.js"></script>
 </body>
 </html>

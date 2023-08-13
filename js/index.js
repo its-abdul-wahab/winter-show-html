@@ -23,13 +23,11 @@ function scrollZoom() {
     observer.observe(image);
 
     // Set initial image scale on page load
-    // console.log('test  scle ', scaleAmount, percentageSeen(image), 1+scaleAmount * percentageSeen(image))
     image.style.transform = `scale(${1 + scaleAmount * percentageSeen(image)})`;
 
     // Only fires if IntersectionObserver is intersecting
     window.addEventListener("scroll", () => {
       if (isVisible) {
-        // console.log('isVisisble , ', scaleAmount, percentageSeen(image), 1+scaleAmount * percentageSeen(image))
         scrollPosY = window.pageYOffset;
         image.style.transform = `scale(${1 +
           scaleAmount * percentageSeen(image)})`;
@@ -76,14 +74,13 @@ const sections = document.querySelectorAll('.site-section');
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5, // Adjust this threshold as needed
+    threshold: 0.5,
   };
   
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
             const sectionID = entry.target.id.split('-')[1]
-            // console.log('In Observer ', index + 1, entry.target.id, Number(sectionID))
             currentSectionIndex = Number(sectionID)
             updateActiveIndicator(Number(sectionID));
         }
@@ -97,11 +94,8 @@ sections.forEach((section) => {
 
 function scrollToSection(index) {
     const section = document.getElementById(`section-${index}`)
-    // console.log('CURRENT_SECTION_INDEX = ', currentSectionIndex)
-    // console.log('INDEX = ', index)
 
     if (section) {
-        // console.log('innerHeight ', window.innerHeight, window.innerHeight * (index - currentSectionIndex))
         if (currentSectionIndex < index) {
             window.scrollBy(0, window.innerHeight * (index - currentSectionIndex));
             currentSectionIndex = index;
@@ -113,7 +107,6 @@ function scrollToSection(index) {
         else console.log('nothing match ', index, currentSectionIndex);
       }
       
-    //   console.log('updated currentSectionIndex = ', currentSectionIndex)
 }
 
 
@@ -131,27 +124,22 @@ window.addEventListener('scroll', () => {
 
 
 function updateActiveIndicator(activeIndex) {
-    // console.log('activeIndex ', activeIndex)
     indicators.forEach((indicator, i) => {
         if (i === activeIndex) indicator.classList.add('active');
         else indicator.classList.remove('active');
       });
-    //   console.log('UPDATING...', activeIndex)
       
     for (let i = 0; i < indicators.length; i++) {
     const indicator = indicators[i];
 
     // Determine whether to show or hide the indicator based on activeIndicator
         if (i === activeIndex - 1) {
-            // console.log('first conxxx ', i, activeIndex - 1);
             indicator.classList.add('active');
             indicator.style.display = 'block';
         } else if (i === activeIndex - 2 || i === activeIndex || (activeIndex === 1 && i === activeIndex+1) || (activeIndex == 11 && i === activeIndex-3)) {
-            // console.log('second conxxx ', i, activeIndex - 2);
             indicator.classList.remove('active');
             indicator.style.display = 'block';
         } else {
-            // console.log('elsexxx ', i);
             indicator.style.display = 'none';
         }
     }
@@ -161,31 +149,3 @@ function updateActiveIndicator(activeIndex) {
 function scrollOnArrow() {
   sections[1].scrollIntoView({ behavior: 'smooth' })
 }
-
-// updateIndicatorsVisibility(1);
-
-// function updateIndicatorsVisibility(activeIndex) {
-//     const indicators = document.querySelectorAll('.indicator');
-
-//     console.log('updating indexjs ', activeIndex)
-//     for (let i = 0; i < indicators.length; i++) {
-//         const indicator = indicators[i];
-    
-//         // Determine whether to show or hide the indicator based on activeIndicator
-//         if (i === activeIndex - 1) {
-//             // console.log('first con ', i, activeIndex - 1);
-//             indicator.classList.add('active');
-//             indicator.style.display = 'block';
-//           } else if (i === activeIndex - 2 || i === activeIndex || (activeIndex === 1 && i === activeIndex+1) ||  (activeIndex === 11 && i === activeIndex-3)) {
-//             // console.log('second con i === activeIndex - 2', i, activeIndex - 2);
-//             // console.log('second con index === activeIndex', i, activeIndex);
-//             // console.log('second con activeIndex === 1 and i === activeIndex + 1', i, activeIndex, activeIndex+1);
-//             // console.log('second con activeIndex === 12 and activeIndex - 3', i, activeIndex - 3);
-//             indicator.classList.remove('active');
-//             indicator.style.display = 'block';
-//           } else {
-//             // console.log('else ', i);
-//             indicator.style.display = 'none';
-//           }
-//       }
-//   }
