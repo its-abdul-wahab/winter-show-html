@@ -119,12 +119,6 @@
     color: white;
   }
 
-  .arrow-container{
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-  }
-
   .arrow {
     background: #fff;
     height: 40px;

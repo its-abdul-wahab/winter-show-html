@@ -157,6 +157,11 @@ function updateActiveIndicator(activeIndex) {
     }
 }
 
+
+function scrollOnArrow() {
+  sections[1].scrollIntoView({ behavior: 'smooth' })
+}
+
 // updateIndicatorsVisibility(1);
 
 // function updateIndicatorsVisibility(activeIndex) {
