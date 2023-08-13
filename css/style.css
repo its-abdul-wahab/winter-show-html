@@ -156,12 +156,17 @@
     border: 2px solid black;
     margin-bottom: 10px;
     cursor: pointer;
-    /* display: none; */
     transition: display 0.3s ease;
 }
 .indicator.active{
-    /* display: block; */
     background: black;
+}
+.indicator.active.white-indicator{
+  background-color: white;
+  border: 2px solid white;
+}
+.indicator.white-indicator{
+  border: 2px solid white;
 }
 
 

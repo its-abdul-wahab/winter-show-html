@@ -78,7 +78,7 @@ const observerOptions = {
   };
   
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
             const sectionID = entry.target.id.split('-')[1]
             currentSectionIndex = Number(sectionID)
@@ -112,12 +112,12 @@ function scrollToSection(index) {
 
 window.addEventListener('scroll', () => {
     const windowTop = window.scrollY;
-    sections.forEach((section, index) => {
+    sections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionBottom = sectionTop + section.clientHeight;
       
       if (windowTop >= sectionTop && windowTop < sectionBottom) {
-        updateActiveIndicator(index + 1);
+        updateActiveIndicator(currentSectionIndex);
       }
     });
   });
@@ -134,10 +134,14 @@ function updateActiveIndicator(activeIndex) {
 
     // Determine whether to show or hide the indicator based on activeIndicator
         if (i === activeIndex - 1) {
-            indicator.classList.add('active');
-            indicator.style.display = 'block';
+          indicator.classList.remove('white-indicator');
+          if ([3, 10].includes(activeIndex)) indicator.classList.add('white-indicator')
+          indicator.classList.add('active');
+          indicator.style.display = 'block';
         } else if (i === activeIndex - 2 || i === activeIndex || (activeIndex === 1 && i === activeIndex+1) || (activeIndex == 11 && i === activeIndex-3)) {
+            indicator.classList.remove('white-indicator');
             indicator.classList.remove('active');
+            if ([3, 10].includes(activeIndex)) indicator.classList.add('white-indicator');
             indicator.style.display = 'block';
         } else {
             indicator.style.display = 'none';
