@@ -81,7 +81,7 @@ const sections = document.querySelectorAll('.site-section');
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5,
+    threshold: [.1, .5],
   };
   
 const observer = new IntersectionObserver((entries) => {
@@ -89,6 +89,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const sectionID = entry.target.id.split('-')[1]
             currentSectionIndex = Number(sectionID)
+            console.log('here ', sectionID)
             updateActiveIndicator(Number(sectionID));
         }
     });
@@ -124,6 +125,7 @@ window.addEventListener('scroll', () => {
       const sectionBottom = sectionTop + section.clientHeight;
       
       if (windowTop >= sectionTop && windowTop < sectionBottom) {
+        console.log('scroll ', currentSectionIndex)
         updateActiveIndicator(currentSectionIndex);
       }
     });
