@@ -14,9 +14,7 @@
   header{
     position: relative;
   }
-  /* header.bg-image-attached{
-    background-image: url('../images/model-img-1.png');
-  } */
+ 
   .bg-image-attached {
     background-size: cover;
     background-position: center;
@@ -77,10 +75,11 @@
     line-height: 3.75rem;
     font-family: Crimson Text;
   }
-
+  section .show-date, section .show-avenue{
+    font-family: Cormorant Infant;
+  }
   section .show-date p{
     font-size: 3.75rem;
-    font-family: Cormorant Infant;
     font-style: normal;
     font-weight: 300;
   }
